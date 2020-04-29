@@ -1,0 +1,20 @@
+    <h1>Formulario de Usuario</h1>
+    <form>
+          <div class="form-group">
+            <label for="">Nombres</label>
+            <input type="text" [(ngModel)]="user.name" class="form-control" id="name" name="name" placeholder="Ingrese su Nombre">
+          </div>
+          <div class="form-group">
+            <label for="">Apellidos</label>
+            <input type="text" [(ngModel)]="user.surname" class="form-control" id="surname" name="surname" placeholder="Ingrese su Apellido">
+          </div>
+          <div class="form-group">
+            <label for="">Correo Electronico</label>
+            <input type="email" [(ngModel)]="user.email" class="form-control" id="email" name="email" placeholder="Ingrese el correo">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Contraseña</label>
+            <input type="password" [(ngModel)]="user.password" class="form-control" id="password" name="password" placeholder="*****">
+          </div>
+          <button type="submit" class="btn btn-primary btn-block btn-signin" (click)="edit ? updateUser(): saveNewUser()">Guardar</button>
+  </form>

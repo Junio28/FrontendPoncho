@@ -1,0 +1,28 @@
+    <h1>Formulario de Cliente</h1>
+    <form>
+          <div class="form-group">
+            <label for="">Nombres</label>
+            <input type="text" class="form-control" [(ngModel)]="client.name" id="name" name="name" placeholder="Ingrese su Nombre">
+          </div>
+          <div class="form-group">
+            <label for="">Apellidos</label>
+            <input type="text" class="form-control" [(ngModel)]="client.lastname" id="lastname" name="lastname" placeholder="Ingrese su Apellido">
+          </div>
+          <div class="form-group">
+            <label for="">Correo Electronico</label>
+            <input type="email" class="form-control" [(ngModel)]="client.email" id="email" name="email" placeholder="Ingrese el correo">
+          </div>
+          <div class="form-group">
+            <label for="">Identificación</label>
+            <input type="text" class="form-control" [(ngModel)]="client.rut" id="rut" name="rut" placeholder="Ingrese la Identificación">
+          </div>
+          <div class="form-group">
+            <label for="">Dirección</label>
+            <input type="text" class="form-control" [(ngModel)]="client.address" id="address" name="address" placeholder="Ingrese la Dirección">
+          </div>
+          <div class="form-group">
+            <label for="">Telefono</label>
+            <input type="text" class="form-control" [(ngModel)]="client.phone" id="phone" name="phone" placeholder="Ingrese la Dirección">
+          </div>
+          <button type="submit" class="btn btn-primary btn-block btn-signin" (click)="edit ? updateClient():  saveNewClient()">Guardar</button>
+      </form>

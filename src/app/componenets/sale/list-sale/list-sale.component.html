@@ -1,0 +1,44 @@
+    <h1>Lista de Ventas</h1>
+    <a routerLink="/venta/nuevo" class="btn btn-primary btn-block btn-signin">Añadir nuevo</a>
+    <hr>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>FECHA</th>
+                <th>DESCUENTO</th>
+                <th>SUBTOTAL</th>
+                <th>TOTAL</th>
+                <th>CREADO</th>
+                <th>EDITADO</th>
+                <th>USUARIO</th>
+                <th>CLIENTE</th>
+                <th>ACCIONES</th>
+            </tr>
+        </thead>
+            <tbody>
+
+                <tr *ngFor="let sale of sales">
+                    <td>{{sale.id}}</td>
+                    <td>{{sale.date}}</td>
+                    <td>{{sale.discount}}</td>
+                    <td>{{sale.subtotal}}</td>
+                    <td>{{sale.total}}</td>
+                    <td>{{sale.created}}</td>
+                    <td>{{sale.updated}}</td>
+                    <td>{{sale.userId}}</td>
+                    <td>{{sale.clientId}}</td>
+                    <td>
+                        <a [routerLink]="['/venta/editar', sale.id]" class="btn btn-warning">
+                            <i class="fa fa-edit" ></i>    
+                        </a>
+                    <button class="btn btn-danger" (click)="deleteSale(sale.id)">
+                        <i class="fa fa-eraser"></i>
+                    </button>
+                    </td>
+                  
+                </tr>
+            </tbody>
+    </table>
+
+   

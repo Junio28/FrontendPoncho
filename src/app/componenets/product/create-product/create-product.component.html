@@ -1,0 +1,36 @@
+    <h1>Formulario de Producto</h1>
+    <form>
+          <div class="form-group">
+            <label for="">Nombre</label>
+            <input type="text" [(ngModel)]="product.name" class="form-control" id="name" name="name" placeholder="Ingrese su Nombre">
+          </div>
+          <div class="form-group">
+            <label for="">Cantidad</label>
+            <input type="number" [(ngModel)]="product.quantity" class="form-control" id="quantity" name="quantity" placeholder="Ingrese la cantidad">
+          </div>
+          <div class="form-group">
+            <label for="">Precio</label>
+            <input type="number" [(ngModel)]="product.price"  class="form-control" id="price" name="price" placeholder="Ingrese el precio">
+          </div>
+          <div class="form-group">
+            <label for="exampleTextarea">Descripción</label>
+            <textarea  [(ngModel)]="product.description" class="form-control" id="description" name="description" rows="3" placeholder="Ingrese el argumento"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="">Marca</label>
+            <input type="text" [(ngModel)]="product.mark" class="form-control" id="mark" name="mark" placeholder="Marca">
+
+          </div>
+          <!-- <div class="form-group">
+            <label for="">Tipo Producto</label>
+            <input type="text" [(ngModel)]="product.typeProductId" class="form-control" id="typeProductId" name="typeProductId">
+
+          </div> -->
+
+          <div class="form-group">
+            <select [(ngModel)]="product.typeProductId" class="form-control" id="typeProductId" name="typeProductId">
+              <option *ngFor="let typeproducts of typeproducts" [value]="typeproducts.id">{{typeproducts.id}}</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block btn-signin" (click)="edit ? updateProduct(): saveNewProduct()">Guardar</button>
+      </form>

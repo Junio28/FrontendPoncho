@@ -1,0 +1,50 @@
+Instalar angular: npm install -g @angular/cli
+
+Crear el proyecto: ng new Frontend
+
+Entrar al proyecto: cd Frontend
+
+Compilar dentro del proyecto:ng serve o npm start, y se prueba en el navegador con localhot:4200
+
+Instalar componenetes
+npm install --save bootstrap popper.js jquery @fortawesome/fontawesome-free bootswatch
+
+Configurar angular.js en esta parte: 
+            "styles": [
+              "./node_modules/bootswatch/dist/yeti/bootstrap.min.css",
+              "./node_modules/@fortawesome/fontawesome-free/js/all.js",
+              "src/styles.css"
+            ],
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/popper.js/dist/umd/popper.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+
+            ]
+
+
+Ingresar en la p�gina https://bootswatch.com/
+
+Para los componenetes se usa ng generate:
+
+header 
+ng g c componenets/layouts/main/header/menu
+
+content
+ng g c componenets/layouts/main/content/titulo
+ng g c componenets/layouts/main/content/info
+
+footer
+ng g c componenets/layouts/main/footer/copyright
+
+
+Generar por ejempo un login de usuario
+ng g c componenets/user/form-login
+
+Ingresar services
+ng g s services/users
+
+Crear las interfaces
+ng g i models/user-i
+
+Instalar cors en el backend para ir de puerto en puerto:npm install cors 

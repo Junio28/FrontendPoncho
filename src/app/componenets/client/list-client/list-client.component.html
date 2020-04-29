@@ -1,0 +1,39 @@
+    <br>
+    <h1>Lista de Clientes</h1>
+    <a routerLink="/cliente/nuevo" class="btn btn-primary btn-block btn-signin">Añadir nuevo</a>
+    <hr>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NOMBRES</th>
+                <th>APELLIDOS</th>
+                <th>CORREO</th>
+                <th>IDENTIFICACIÓN</th>
+                <th>DIRECCIÓN</th>
+                <th>TELEFONO</th>
+                <th>ACCION</th>
+            </tr>
+        </thead>
+            <tbody>
+
+                <tr *ngFor="let client of clients">
+                    <td>{{client.id}}</td>
+                    <td>{{client.name}}</td>
+                    <td>{{client.lastname}}</td>
+                    <td>{{client.email}}</td>
+                    <td>{{client.rut}}</td>
+                    <td>{{client.address}}</td>
+                    <td>{{client.phone}}</td>
+                    <td>
+                        <a [routerLink]="['/cliente/editar', client.id]" class="btn btn-warning">
+                            <i class="fa fa-edit"></i>    
+                        </a>
+                    <button class="btn btn-danger" (click)="deleteClient(client.id)">
+                        <i class="fa fa-eraser"></i>
+                    </button>
+                    </td>
+                </tr>
+            </tbody>
+    </table>
+

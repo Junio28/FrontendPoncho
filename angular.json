@@ -24,9 +24,15 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootswatch/dist/Spacelab/bootstrap.min.css",
+              "./node_modules/@fortawesome/fontawesome-free/js/all.js",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/popper.js/dist/umd/popper.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -119,6 +125,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Frontend"
+    }
+  },
+  "defaultProject": "Frontend",
+  "cli": {
+    "analytics": "0301c875-8ad1-463e-98ba-144883c7c570"
+  }
 }

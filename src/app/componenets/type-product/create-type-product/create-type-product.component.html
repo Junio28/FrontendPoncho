@@ -1,0 +1,8 @@
+    <h1>Formulario de Tipo Producto</h1>
+    <form>
+          <div class="form-group">
+            <label for="">Nombre</label>
+            <input type="text" class="form-control" [(ngModel)]="typeproduct.name" id="name" name="name" placeholder="Ingrese el Tipo Producto">
+          </div>
+          <button type="submit" class="btn btn-primary btn-block btn-signin" (click)="edit ? updateTypeProduct(): saveNewTypeProduct()">Guardar</button>
+      </form>

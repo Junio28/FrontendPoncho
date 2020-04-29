@@ -1,0 +1,50 @@
+    <h1>Formulario de Venta</h1>
+    <form>
+          <div class="form-group">
+            <label for="">Fecha</label>
+            <input type="date"  [(ngModel)]="sale.date" class="form-control" id="date" name="date" value="data">
+          </div>
+          <div class="form-group">
+            <label for="">Descuento</label>
+            <input type="number" [(ngModel)]="sale.discount" class="form-control" id="discount" name="discount" placeholder="Ingrese el descuento">
+          </div>
+          <div class="form-group">
+            <label for="">Subtotal</label>
+            <input type="number" [(ngModel)]="sale.subtotal" class="form-control" id="subtotal" name="subtotal" placeholder="Ingrese el subtotal">
+          </div>
+          <div class="form-group">
+            <label for="">Total</label>
+            <input type="number" [(ngModel)]="sale.total" class="form-control" id="total" name="subtotal" placeholder="Ingrese el total">
+          </div>
+          <div class="form-group">
+            <label for="">Creado</label>
+            <input type="number" [(ngModel)]="sale.created" class="form-control" id="created" name="created" >
+          </div>
+          <div class="form-group">
+            <label for="">Editado</label>
+            <input type="number" [(ngModel)]="sale.updated" class="form-control" id="updated" name="updated">
+          </div>
+          <!-- <div class="form-group">
+            <label for="">Cliente</label>
+            <input type="number" [(ngModel)]="sale.clientId" class="form-control" id="clientId" name="clientId">
+          </div> -->
+          <div class="form-group">
+            <label for="">Usuario</label>
+            <select  [(ngModel)]="sale.userId" class="form-control" id="userId" name="userId">
+              <option *ngFor="let users of users" [value]="users.id">{{users.id}}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="">Cliente</label>
+            <select  [(ngModel)]="sale.clientId" class="form-control" id="clientId" name="clientId">
+              <option *ngFor="let clients of clients" [value]="clients.id">{{clients.id}}</option>
+            </select>
+          </div>
+          <!-- <div class="form-group">
+            <select  class="form-control" id="exampleSelect2">
+              <option>Seleccione el Cliente</option>
+              <option></option>
+            </select>
+          </div> -->
+          <button type="submit" class="btn btn-primary btn-block btn-signin" (click)="edit ? updateSale():saveNewSale()">Guardar</button>
+      </form>
